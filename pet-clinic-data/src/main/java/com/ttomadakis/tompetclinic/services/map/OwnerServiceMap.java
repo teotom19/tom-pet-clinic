@@ -2,9 +2,11 @@ package com.ttomadakis.tompetclinic.services.map;
 
 import com.ttomadakis.tompetclinic.model.Owner;
 import com.ttomadakis.tompetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override

@@ -4,8 +4,6 @@ import com.ttomadakis.tompetclinic.model.Owner;
 import com.ttomadakis.tompetclinic.model.Vet;
 import com.ttomadakis.tompetclinic.services.OwnerService;
 import com.ttomadakis.tompetclinic.services.VetService;
-import com.ttomadakis.tompetclinic.services.map.OwnerServiceMap;
-import com.ttomadakis.tompetclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
